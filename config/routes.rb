@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  mount ActionCable.server, at: '/cable'
+
   resources :post_tests
   resources :messages
   devise_for :users

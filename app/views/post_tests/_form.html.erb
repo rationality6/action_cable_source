@@ -1,5 +1,4 @@
-
-<%= simple_form_for(@post_test) do |f| %>
+<%= simple_form_for(@post_test, html: {class: 'form-inline'}) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 

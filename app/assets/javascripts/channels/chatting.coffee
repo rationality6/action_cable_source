@@ -7,8 +7,6 @@ App.chatting = App.cable.subscriptions.create "ChattingChannel",
 
   received: (data) ->
     unless data.content.blank?
-      $('#messages').append "
-" + data.message_user.email + " : " + data.content + "
-"
+      $('#messages').append "<li>" + data.message_user.email + " : " + data.content + "</li>"
       $('#message_content').value ""
       $('#messages').scrollTop $('#messages')[0].scollHeight
